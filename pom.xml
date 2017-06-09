@@ -11,18 +11,22 @@
     <name>nexus-daocloud-maven-sample Project</name>
 
     <repositories>
-        <repository>
-            <id>nexus-daocloud</id>
-            <name>Nexus daocloud</name>
-            <url>http://nexus.daocloud.io:8081/repository/maven-public/</url>
-        </repository> 
+  
         <!-- 可以设置多个repository，在实际的开发过程中会从中心仓库取到 -->
         <repository>
             <id>central</id>
              <url>http://repo1.maven.org/maven2/</url>
+
+            <url>http://nexus.daocloud.io/repository/maven-public/</url>
+        </repository>
+        <!-- 可以设置多个repository，在实际的开发过程中会从中心仓库取到 -->
+        <repository>
+            <id>central</id>
+            <url>http://repo1.maven.org/maven2/</url>
         </repository>
     </repositories>
-    
+
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
